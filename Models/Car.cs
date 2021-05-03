@@ -4,51 +4,53 @@ namespace Dealership.Models {
 
   public class Car
   {
-    public string MakeModel { get; set; } //public property
-    // {
-    //     get
-    //     {
-    //         return "That's a big secret. You'll have to visit Lonny's to find out about our special deals!"; //property performing 'read' action
-    //     }
-    //     set
-    //     {
-    //         _makeModel = value; //property performing 'write' action
-    //         // 'value' is a keyword apparently
-    //     }
-    // }
-    public int Price { get; set; }
-    public int Miles { get; set; }
+    private string _makeModel;
+
+    public string MakeModel //public property
+    {
+        get
+        {
+            return "That's a big secret. You'll have to visit Lonny's to find out about our special deals!"; //property performing 'read' action
+        }
+        set
+        {
+            _makeModel = value; //property performing 'write' action
+            // 'value' is a keyword apparently
+        }
+    }
+    private int _price;
+    private int _miles;
 
     public Car(string makeModel, int price, int miles)
     {
-      MakeModel = makeModel;
-      Price = price;
-      Miles = miles;
+      _makeModel = makeModel;
+      _price = price;
+      _miles = miles;
     }
 
-    // public string MakeModel()
-    // {
-    //   return MakeModel;
-    // }
+    public string GetMakeModel()
+    {
+      return _makeModel;
+    }
 
-    // public int Price()
-    // {
-    //   return Price;
-    // }
+    public int GetPrice()
+    {
+      return _price;
+    }
 
-    // public int Miles()
-    // {
-    //   return Miles;
-    // }
+    public int GetMiles()
+    {
+      return _miles;
+    }
 
-    // public void Price(int newPrice)
-    // {
-    //   Price = newPrice;
-    // }
+    public void SetPrice(int newPrice)
+    {
+      _price = newPrice;
+    }
 
     public bool WorthBuying(int maxPrice)
     {
-      return (Price <= maxPrice);
+      return (_price <= maxPrice);
     }
 
     public static string MakeSound(string sound)
