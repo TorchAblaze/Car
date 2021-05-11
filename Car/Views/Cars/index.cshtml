@@ -1,0 +1,15 @@
+@using Dealership.Models;
+
+<h1>Car List</h1>
+<ul>
+  @foreach (Car car in Model)
+  {
+    <li>@car.MakeModel</li>
+    <ul>
+      <li>@car.Miles miles</li>
+      <li>$@car.Price.00 </li>
+    </ul>
+  }
+
+</ul>
+<a href="/items/new">Add a new item.</a>
