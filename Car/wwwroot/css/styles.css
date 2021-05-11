@@ -57,3 +57,20 @@ body {
   text-align: center;
   font-size: large;
 }
+#userInput {
+  margin: auto;
+  width: 65%;
+  display: block;
+}
+#labelText {
+  text-align: center;
+  display: block;
+  font-size: larger;
+  margin-top: 10px;
+}
+#submitButton {
+  margin: auto;
+  width: 50%;
+  display: block;
+  margin-top: 10px;
+}

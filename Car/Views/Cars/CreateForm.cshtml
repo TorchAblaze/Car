@@ -1,5 +1,12 @@
-<form action="/cars/max" method="post">
-  <label for="userInput">Enter a price</label>
-  <input id="userInput" name="userInput" type="number">
-  <button type="submit">Submit</button>
-</form>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+<div class="container">
+  <div class="card" id="carListPageOne">
+    <form action="/cars/max" method="post">
+      <label id="labelText" for="userInput">Enter a price:</label>
+      <input id="userInput" name="userInput" type="number">
+      <button id="submitButton" class="btn btn-outline-warning" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
