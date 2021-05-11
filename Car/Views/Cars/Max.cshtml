@@ -1,0 +1,19 @@
+@using Dealership.Models
+<h1>Cars in your price Range!</h1>
+<ul>
+  @foreach (Car car in Model)
+  {
+    <li>@car.MakeModel</li>
+    <ul>
+      <li>@car.Miles miles</li>
+      <li>$@car.Price.00 </li>
+    </ul>
+  }
+
+</ul>
+  @* <li>@Model.MakeModel</li>
+  <ul>
+    <li>Price: @Model.Price</li>
+    <li>Milage: @Model.Miles</li>
+  </ul>
+</ul> *@
