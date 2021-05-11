@@ -1,0 +1,59 @@
+body {
+  color: whitesmoke;
+  background-color: mediumspringgreen;
+}
+
+#homepage-header {
+  color: white;
+  padding: 8%;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#homepage {
+  color: white;
+  background-color: #524d50;
+  padding: 2%;
+  text-align: center;
+  height: 100%;
+}
+
+#links a {
+  color: gold;
+}
+
+#carListPageOne,
+#carListPageTwo {
+  margin: auto;
+  width: 65vw;
+  max-width: 500px;
+  margin-top: 5vh;
+  background-color: #524d50;
+}
+.carHeader {
+  text-align: center;
+  text-decoration: underline;
+}
+.listList {
+  margin: auto;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  list-style-type: none;
+  font-size: larger;
+}
+.makeModel {
+  font-size: x-large;
+  color: gold;
+}
+#homeButtonOne,
+#homeButtonTwo {
+  margin: auto;
+  display: block;
+  width: 50%;
+  margin-bottom: 10px;
+}
+.priceParagraph {
+  text-align: center;
+  font-size: large;
+}

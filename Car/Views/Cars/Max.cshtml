@@ -1,19 +1,28 @@
-@using Dealership.Models
-<h1>Cars in your price Range!</h1>
-<ul>
-  @foreach (Car car in Model)
-  {
-    <li>@car.MakeModel</li>
-    <ul>
-      <li>@car.Miles miles</li>
-      <li>$@car.Price.00 </li>
-    </ul>
-  }
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="~/css/styles.css" />
 
-</ul>
-  @* <li>@Model.MakeModel</li>
-  <ul>
-    <li>Price: @Model.Price</li>
-    <li>Milage: @Model.Miles</li>
-  </ul>
-</ul> *@
+@using Dealership.Models
+<div class="container">
+  <div class="card" id="carListPageTwo">
+    <h1 class="carHeader">Cars in your price Range!</h1>
+
+    @if (Model.Count == 0)
+    {
+      <p class="priceParagraph">There are no cars available in your price range</p>
+    }
+
+    <ul class="listList">
+      @foreach (Car car in Model)
+      {
+        <li class="makeModel">@car.MakeModel</li>
+        <ul class="listList">
+          <li>@car.Miles miles</li>
+          <li>$@car.Price.00 </li>
+          <hr width="50%">
+        </ul>
+      }
+    </ul>
+    <a href="/"><button class="btn btn-outline-warning" id="homeButtonTwo" type="button">Return to Home.</button></a>
+  </div>
+</div>

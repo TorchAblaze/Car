@@ -25,6 +25,7 @@ namespace Dealership.Controllers
     public ActionResult Max(int userInput)
     {
       int maxPrice = userInput;
+      string message = "There are no cars available in your price range.";
       Car volkswagen = new Car("1974 Volkswagen Thing", 1100, 368792);
       Car yugo = new Car("1980 Yugo Koral", 700, 56000);
       Car ford = new Car("1988 Ford Country Squire", 1400, 239001);
@@ -32,6 +33,7 @@ namespace Dealership.Controllers
 
       List<Car> allCars = new List<Car>() { volkswagen, yugo, ford, amc };
       List<Car> CarsMatchingSearch = new List<Car>(0);
+
       foreach (Car automobile in allCars)
       {
         if (automobile.WorthBuying(maxPrice))
@@ -40,6 +42,8 @@ namespace Dealership.Controllers
         }
       }
       return View(CarsMatchingSearch);
+
+
     }
   }
 }
